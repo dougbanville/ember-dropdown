@@ -1,5 +1,13 @@
-{{!-- The following component displays Ember's default welcome message. --}}
-{{welcome-page}}
-{{!-- Feel free to remove this! --}}
-
-{{outlet}}
+<div class="m-4">
+  <DropdownList class="list-reset flex" as |List|>
+    <List.item class="relative p-4 bg-grey-light hover:bg-yellow cursor-pointer" as |Item|>Menu a
+      <Item.sublist class="list-reset absolute pin-l" as |List|>
+        <List.item class="p-4">Item A</List.item>
+        <List.item class="p-4">Item A</List.item>
+        <List.item class="p-4">Item A</List.item>
+      </Item.sublist>
+    </List.item>
+    <List.item class="relative p-4 bg-grey-light hover:bg-yellow cursor-pointer">Menu B</List.item>
+    <List.item class="relative p-4 bg-grey-light hover:bg-yellow cursor-pointer">Menu C</List.item>
+  </DropdownList>
+</div>
