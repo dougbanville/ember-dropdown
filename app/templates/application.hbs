@@ -1,11 +1,14 @@
 <div class="m-4">
   <DropdownList class="list-reset flex" as |List|>
-    <List.item class="relative p-4 bg-grey-light hover:bg-yellow cursor-pointer" as |Item|>Menu a
-      <Item.sublist class="list-reset absolute pin-l" as |List|>
-        <List.item class="p-4">Item A</List.item>
-        <List.item class="p-4">Item A</List.item>
-        <List.item class="p-4">Item A</List.item>
-      </Item.sublist>
+    <List.item class="relative p-4 bg-grey-light hover:bg-yellow cursor-pointer" as |Item|>
+      Menu a
+      {{#if Item.isActive}}
+        <Item.sublist class="list-reset absolute pin-l" as |List|>
+          <List.item class="p-4" as |Item|>Item A {{if Item.isActive "active"}}</List.item>
+          <List.item class="p-4">Item A</List.item>
+          <List.item class="p-4">Item A</List.item>
+        </Item.sublist>
+      {{/if}}
     </List.item>
     <List.item class="relative p-4 bg-grey-light hover:bg-yellow cursor-pointer">Menu B</List.item>
     <List.item class="relative p-4 bg-grey-light hover:bg-yellow cursor-pointer">Menu C</List.item>
